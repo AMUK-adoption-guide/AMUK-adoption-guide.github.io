@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMUK Adoption Guide</title>
+    <link rel="stylesheet" href="AMUK - Adopting AM 3.css">
+</head>
+<body>
+        <!-- Introductory Box that appears when the page loads -->
+        <div id="intro-box" style="display: none;">
+            <img class="intro-image" src="AM-UK_Logo_CMYK[69].png" alt="Intro Logo"/>
+            <h2>Welcome to the AMUK Adoption Guide</h2>
+            <p>The AMUK Adoption Guide provides valuable insights into the common processes of Additive Manufacturing (AM) and offers practical guidance for businesses looking to integrate AM into their 
+                operations. The site covers essential steps such as evaluating the right technology, understanding material options, and adapting existing workflows to incorporate AM. It also explores key 
+                considerations, including cost analysis, training requirements, and the potential benefits of improving efficiency and innovation. Whether you're a beginner or looking to refine your AM 
+                strategy, this guide helps streamline the adoption process for successful implementation.</p>
+            <button id="continue-button">CONTINUE</button>
+        </div>
+    
+
+    <!-- Top Row with 3 boxes -->
+    <div class="main-content" id="home">
+        <div class="container top-row">
+            <div class="box" data-title="Material Extrusion">
+                MATERIAL EXTRUSION
+            </div>
+            <div class="box" data-title="Binder Jetting">
+                BINDER JETTING
+            </div>
+            <div class="box" data-title="Material Jetting">
+                MATERIAL JETTING
+            </div>
+        </div>
+
+        <!-- Bottom Row with 4 boxes -->
+        <div class="container bottom-row">
+            <div class="box" data-title="Direct Energy Deposition">
+                DIRECT ENERGY DEPOSITION
+            </div>
+            <div class="box" data-title="Powder Bed Fusion">
+                POWDER BED FUSION
+            </div>
+            <div class="box" data-title="VAT Photopolymerisation">
+                VAT PHOTOPOLYMERISATION
+            </div>
+            <div class="box" data-title="Sheet Lamination">
+                SHEET LAMINATION
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Overlay -->
+    <img src="C:\Users\archi\OneDrive\MTA DOCS\Pictures\AM-UK_Icon_RGB.png" alt="Centered Image" class="overlay-image">
+
+    <!-- Modal for Expanded Box -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Box Title</h2>
+            <p id="modal-info">Box details will go here...</p>
+        </div>
+    </div>
+
+ <!-- Bottom Bar Section -->
+<div class="bottom-bar3" id="scrollToAdopting">
+    <p class="bottom-bar-text">Adopting Additive Manufacturing</p>
+    <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+</div>
+
+<script>
+// Scroll functionality when bottom bar is clicked
+document.getElementById("scrollToAdopting").addEventListener("click", function() {
+    const targetSection = document.getElementById("adopting-additive-manufacturing");
+    
+    // Scroll smoothly to the target section
+    targetSection.scrollIntoView({ behavior: "smooth" });
+});
+</script>
+
+
+<!-- Adopting Additive Manufacturing Section (full page) -->
+<div id="adopting-additive-manufacturing" class="section">
+    <div class="top-arrow" onclick="scrollToSection('home')">&#x25C0;</div> <!-- Left arrow -->
+    <img src="AM-UK_Logo_CMYK[69].png" alt="image-header" class="adopt-image">
+    <h2>Adopting Additive Manufacturing</h2>
+    <p>Explore our step-by-step guide to help your business implement additive manufacturing into your processes.</p>
+
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage1">
+        <p1 class="bottom-bar-text">Stage 1 - Assess Needs & Feasibility</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+// Scroll functionality 
+document.getElementById("scrollToStage1").addEventListener("click", function() {
+    const nextSection = document.getElementById("stage-1");
+    
+    // Scroll smoothly to the next section
+    nextSection.scrollIntoView({ behavior: "smooth" });
+});
+
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
+
+<!-- Sidebar toggle button -->
+<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <ul>
+        <li><a href="#stage1" onclick="navigateToStage('stage-1')">Stage 1 - Assess Needs & Feasibility</a></li>
+        <li><a href="#stage2" onclick="navigateToStage('stage-2')">Stage 2 - Identify Applications</a></li>
+        <li><a href="#stage3" onclick="navigateToStage('stage-3')">Stage 3 - Evaluation & Training</a></li>
+        <li><a href="#stage4" onclick="navigateToStage('stage-4')">Stage 4 - Design for AM</a></li>
+        <li><a href="#stage5" onclick="navigateToStage('stage-5')">Stage 5 - Quality Control & Testing</a></li>
+        <li><a href="#stage6" onclick="navigateToStage('stage-6')">Stage 6 - Integration</a></li>
+        <li><a href="#stage7" onclick="navigateToStage('stage-7')">Stage 7 - Scaling & Improvements</a></li>
+        <li><a href="#stage8" onclick="navigateToStage('stage-8')">Stage 8 - IP & Regulatory Compliance</a></li>
+        <li><a href="#stage9" onclick="navigateToStage('stage-9')">Stage 9 - Cost Analysis & ROI</a></li>
+    </ul>
+</div>
+
+
+
+<!-- Stage 1 Section (full page) -->
+<div id="stage-1" class="section">
+    <div class="top-arrow" onclick="scrollToSection('adopting-additive-manufacturing')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Assessing Needs & Feasibility</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+    <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>Begin by conducting a thorough assessment of your current manufacturing processes, identifying the pain points, inefficiencies, or limitations. Consider factors like production volumes, part 
+        complexity, customization needs, and lead times. <br><br> Understand if additive manufacturing (AM) could address specific challenges, such as reducing tooling costs, enabling part consolidation, 
+        reducing weight, or producing highly customized products. Also, assess whether AM can fit into your budget and timeline, keeping in mind that the investment in 3D printing technologies should 
+        align with your company's growth objectives and long-term goals.
+    </p>
+    </div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+         <!-- Dropdown 1 -->
+         <div class="dropdown">
+            <button class="dropdown-btn">Gripper customisation at Schunk by Materialise</button>
+            <div class="dropdown-content">
+                <img src="Schunk.jpeg" alt="Image 1" class="dropdown-image" />
+                <p>Schunk, a manufacturer of customized grippers for production processes, has partnered with Belgian company Materialise to create an online platform leveraging additive manufacturing. 
+                    This platform allows clients to customize standard gripper shapes digitally, reducing production time and resource use. The process, which takes about 20 minutes to complete online, 
+                    enables grippers to be 3D printed and delivered within a week. This innovation significantly decreases the need for intensive engineering collaboration and provides Schunk with valuable 
+                    data on customer preferences and demand patterns.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">A print hub in the  Port of Rotterdam</button>
+            <div class="dropdown-content">
+                <img src="POR.jpeg" alt="Image 2" class="dropdown-image" />
+                <p>The Port of Rotterdam is exploring high-end additive manufacturing to gain a competitive edge in the fourth industrial revolution. With plans to establish an industrial print hub as part
+                    of its smart port strategy, the port aims to enable businesses to source high-quality industrial and maritime parts on demand, reducing costly downtimes. To lay the groundwork, the port 
+                    has partnered with Innovation Quarter and RDM Makerspace to pilot a program identifying suitable parts for 3D printing. This initiative will build expertise, assess opportunities and 
+                    challenges, gather business case data, and guide future steps toward creating a functional industrial printing hub.</p>
+            </div>
+        </div>
+        <br>
+        <p><strong>Grants & Funding</strong></p>
+        <!-- Dropdown 3 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Innovate UK Funding Competitions</button>
+            <div class="dropdown-content">
+                <p>Innovate UK periodically offers funding competitions to stimulate innovation in additive manufacturing. For instance, in 2016, they allocated up to £4.5 million for projects developing 
+                    advanced 3D printing solutions. <a href="https://www.ukri.org/councils/innovate-uk/" target="_blank">Innovate UK</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 4 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Catapult Centres</button>
+            <div class="dropdown-content">
+                <p>The UK has established Catapult Centres, such as the High Value Manufacturing Catapult, to support businesses in adopting advanced manufacturing technologies, including additive 
+                    manufacturing. These centres provide access to expertise, facilities, and potential funding opportunities. <a href="https://hvm.catapult.org.uk/" target="_blank">HVMC</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 5 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Made Smarter Programme</button>
+            <div class="dropdown-content">
+                <p>This initiative offers funding to UK manufacturers for digital transformation, including the adoption of additive manufacturing technologies. It aims to enhance productivity and 
+                    competitiveness. <a href="https://www.madesmarter.uk/" target="_blank">Made Smarter</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 6 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Research Grants</button>
+            <div class="dropdown-content">
+                <p>Institutions like the Centre for Additive Manufacturing at the University of Nottingham host research grants from EPSRC, Innovate UK, and other funders, focusing on advancing additive 
+                    manufacturing technologies. <a href="https://www.nottingham.ac.uk/research/groups/cfam/research/research-projects/index.aspx?utm_source=chatgpt.com" target="_blank">University of Nottingham</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage2">
+        <p1 class="bottom-bar-text">Stage 2 - Identify Applications</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+    </div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage2").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-2");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 2 Section (full page) -->
+<div id="stage-2" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-1')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Identify Applications</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>Identify parts/products within your range that could benefit from AM. This includes evaluating the complexity of geometries that traditional manufacturing cannot easily achieve, the need for rapid 
+        prototyping or iterations, parts requiring high levels of customization, or low-volume production runs. Parts that need high precision, unique features, or specific mechanical properties (such as 
+        aerospace components or medical implants) are ideal candidates.<br><br>This stage involves mapping out a strategy for incorporating AM across different product lines and understanding the value AM can 
+        bring to each.</p>
+    </div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+             <!-- Dropdown 1 -->
+             <div class="dropdown">
+                <button class="dropdown-btn">Prototyping for Medical Devices (University of Iowa)</button>
+                <div class="dropdown-content">
+                    <img src="protostudios.jpeg" alt="Image 1" class="dropdown-image" />
+                    <p>The team at Protostudios, a medical device prototyping lab, utilized Stratasys FDM and PolyJet technologies to rapidly develop and iterate on an improved version of the "Iowa Brace,"
+                         a medical device for children with clubfoot. By choosing PC-ABS, a high-strength material, they produced 18 iterations efficiently, ensuring optimal design and functionality. 
+                         This case exemplifies the importance of matching additive manufacturing technology and material properties to application needs, such as strength and customization for medical 
+                         use.</p>
+                </div>
+            </div>
+    
+            <!-- Dropdown 2 -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Tidal Turbine Blade Design</button>
+                <div class="dropdown-content">
+                    <img src="NREL.jpeg" alt="Image 2" class="dropdown-image" />
+                    <p> In developing a marine hydrokinetic turbine blade, researchers evaluated multiple additive manufacturing (AM) processes and materials using a decision matrix. They determined that a 
+                        hybrid approach combining Directed Energy Deposition (DED) for the structural box spar and FDM for the hydrodynamic fairings best met requirements for strength, environmental 
+                        resistance, and cost efficiency. The process highlighted how AM technologies and compatible materials could be selected based on the component's functional and environmental 
+                        demands.</p>
+                </div>
+            </div>
+            <br>
+            <div class="question-container">
+                <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff;"><strong>Question</strong></p>
+                <p>Rank these components from the most to least suitable applications for adopting additive manufacturing.</p>
+            </div>
+            
+            <div class="button-container">
+                <button class="button" onclick="rankButton(this)">Medical Equipment (Customization and Precision)</button>
+                <button class="button" onclick="rankButton(this)">Aerospace Components (High Precision, Complex Geometries)</button>
+                <button class="button" onclick="rankButton(this)">Automotive Parts (Low-Volume Production, Non-Critical Components)</button>
+                <button class="button" onclick="rankButton(this)">Prototyping for Consumer Electronics (Rapid Iteration and Low-Volume Production)</button>
+                
+            </div>
+            
+            <div id="result"></div>
+        </div>
+    </div>
+
+
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage3">
+        <p1 class="bottom-bar-text">Stage 3 - Evaluation & Training</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage3").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-3");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 3 Section (full page) -->
+<div id="stage-3" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-2')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Evaluation & Training</h2>
+<div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px;"><strong>Guide</strong></p>
+    <p>Additive manufacturing technologies like FDM, SLA, and SLS cater to different needs: FDM is affordable for thermoplastics, SLA offers precision with resins, and SLS excels with durable, complex parts. 
+        Materials include thermoplastics, metals, and composites, selected for properties like strength and flexibility. Choose in-house or outsourced printing based on scale and requirements.<br><br>Select 
+        printers based on speed, resolution, build volume, and material compatibility to meet production needs. Ensure they can handle complex designs reliably. Use software with features like DFAM 
+        optimization, error-checking, and CAD integration, along with tools for advanced slicing and machine diagnostics to enhance efficiency.<br><br>Train teams in printer operation, material handling, 
+        and DFAM to optimize designs and processes. Include troubleshooting and maintenance in training, and encourage continuous learning to stay updated on AM advancements and best practices.</p>
+    </div>  
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+              <!-- Dropdown 1 -->
+              <div class="dropdown">
+                <button class="dropdown-btn">FGAM Training Workshops (Functionally Graded Additive Manufacturing)</button>
+                <div class="dropdown-content">
+                    <img src="brunel.png" alt="Image 1" class="dropdown-image" />
+                    <p>FGAM workshops focused on training participants in advanced 3D printing techniques, such as voxel modeling, to optimize aerospace and automotive components. The impact was a deeper 
+                        understanding of compatible technologies and material properties, leading to better-designed AM components. The takeaway is that specialized training enables more efficient use of 
+                        advanced AM techniques, enhancing product design in high-performance sectors.</p>
+                </div>
+            </div>
+    
+            <!-- Dropdown 2 -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Siemens' 3D Printing Adoption</button>
+                <div class="dropdown-content">
+                    <img src="siemens.png" alt="Image 2" class="dropdown-image" />
+                    <p>Siemens integrated additive manufacturing into its operations by training employees and redesigning parts for AM compatibility. This approach allowed for quicker adoption of AM for 
+                        high-performance industrial components. The key takeaway is that investing in training accelerates the transition to AM, helping companies optimize production and achieve better 
+                        component performance.</p>
+                </div>
+            </div>
+            <div class="true-false-container">
+                <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; line-height: 1.0; margin-bottom: -10px;"><strong>Questions - True or False: </strong></p>
+                <div class="question">
+                    <p class="question-text">Fused Deposition Modeling (FDM) is most suitable for parts requiring high precision and smooth surface finishes.</p>
+                    <button class="true-false-btn" onclick="checkAnswer1(this, 'False (FDM is more suitable for prototyping and lower precision parts, while SLA is better for high precision and smooth finishes).')">True</button>
+                    <button class="true-false-btn" onclick="checkAnswer1(this, 'False (FDM is more suitable for prototyping and lower precision parts, while SLA is better for high precision and smooth finishes).')">False</button>
+                    <div class="answer"></div>
+                </div>
+            
+                <div class="question">
+                    <p class="question-text">Materials like stainless steel and titanium are primarily used in additive manufacturing for high-strength and heat-resistant applications, such as aerospace and medical implants.</p>
+                    <button class="true-false-btn" onclick="checkAnswer2(this, 'True')">True</button>
+                    <button class="true-false-btn" onclick="checkAnswer2(this, 'True')">False</button>
+                    <div class="answer"></div>
+                </div>
+            
+                <div class="question">
+                    <p class="question-text">Design for Additive Manufacturing (DFAM) focuses on redesigning parts to reduce material usage, improve performance, and streamline production, which is important for optimizing 3D models for printing.</p>
+                    <button class="true-false-btn" onclick="checkAnswer3(this, 'True')">True</button>
+                    <button class="true-false-btn" onclick="checkAnswer3(this, 'True')">False</button>
+                    <div class="answer"></div>
+                </div>
+            
+                <div class="question">
+                    <p class="question-text">In-house printing is always the best option for companies looking to adopt additive manufacturing, as it eliminates the need for outsourcing.</p>
+                    <button class="true-false-btn" onclick="checkAnswer4(this, 'False (In-house printing is ideal for certain cases, but outsourcing may be more practical depending on production scale, part requirements, and team capabilities).')">True</button>
+                    <button class="true-false-btn" onclick="checkAnswer4(this, 'False (In-house printing is ideal for certain cases, but outsourcing may be more practical depending on production scale, part requirements, and team capabilities).')">False</button>
+                    <div class="answer"></div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage4">
+        <p1 class="bottom-bar-text">Stage 4 - Design for AM</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage4").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-4");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 4 Section (full page) -->
+<div id="stage-4" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-3')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Design for AM</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>One of the key advantages of AM is its ability to create complex, lightweight, and optimized parts. Redesign existing parts to leverage AM capabilities, such as reducing the number of components by 
+        consolidating them into a single 3D-printed part or using lattice structures to reduce weight while maintaining strength. Optimize parts for easier post-processing, enhance thermal performance, or 
+        allow for greater customization. A well-thought-out DFAM process can improve material efficiency and reduce production costs. Encourage collaboration between design, engineering, and production 
+        teams to achieve the best results.</p>
+    </div>    
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+        <!-- Dropdown 1 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Volkswagen's Redesigned Nozzles</button>
+            <div class="dropdown-content">
+                <img src="VW.png" alt="Image 1" class="dropdown-image" />
+                <p>Volkswagen used Design for Additive Manufacturing (DFAM) to redesign car door nozzles into a single Metal AM component, resulting in significant cost and time savings. This redesign 
+                    reduced lead times from weeks to days and saved 650% in costs. The takeaway is that applying DFAM principles can lead to substantial improvements in cost-efficiency and production 
+                    timelines.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">GE Aviation's Turbine Blades</button>
+            <div class="dropdown-content">
+                <img src="GE.png" alt="Image 2" class="dropdown-image" />
+                <p>GE Aviation applied DFAM to optimize turbine blades, improving their performance and reducing material waste. This redesign enhanced part reliability and production efficiency, crucial 
+                for the aerospace industry. The takeaway is that DFAM not only improves manufacturability but also enhances the performance of critical components, especially in sectors like aviation.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; line-height: 1.0; margin-bottom: 10px;"><strong>Video</strong></p>
+            <video controls width="80%" style="border-radius: 10px; margin-top: 10px; margin-left: 30px ;">
+                <source src="design-for-am.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div> 
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage5">
+        <p1 class="bottom-bar-text">Stage 5 - Quality Control & Testing</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage5").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-5");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 5 Section (full page) -->
+<div id="stage-5" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-4')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Quality Control & Testing</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>Implement rigorous quality control processes tailored to additive manufacturing. Since AM parts are often made with different materials and methods than traditional parts, new testing and inspection 
+        procedures must be considered.<br><br>Techniques like non-destructive testing (e.g., X-ray or ultrasonic testing), mechanical testing (e.g., tensile, fatigue, and impact testing), and surface finish 
+        evaluation are crucial to ensure product performance and quality. Maintain detailed records of testing results to monitor consistency across production runs and improve part reliability.</p>
+</div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+         <!-- Dropdown 1 -->
+         <div class="dropdown">
+            <button class="dropdown-btn">BMW's AM Testing Processes</button>
+            <div class="dropdown-content">
+                <img src="BMW.jpeg" alt="Image 1" class="dropdown-image" />
+                <p>BMW implemented advanced quality control protocols, including non-destructive testing (NDT) methods like X-ray imaging, to ensure 3D-printed automotive parts met safety and performance 
+                    standards. This process ensured the reliability of AM parts, essential for automotive safety. The takeaway is that robust quality control is vital to ensure AM parts meet rigorous 
+                    safety and performance standards.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">NASA's Rocket Engine Testing</button>
+            <div class="dropdown-content">
+                <img src="NASA.png" alt="Image 2" class="dropdown-image" />
+                <p>NASA used NDT to test the structural integrity of 3D-printed rocket engine parts under extreme conditions. This testing ensured the parts were reliable and could withstand the stresses 
+                    of space missions. The takeaway is that thorough testing is critical for ensuring the reliability and safety of AM parts in high-risk, high-performance applications like aerospace.</p>
+            </div>
+        </div>
+        <br>
+        <p><strong>Statistics</strong></p>
+        <!-- Dropdown 3 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Defect Classification Accuracy</button>
+            <div class="dropdown-content">
+                <p>Implementing machine learning techniques in AM has led to significant improvements in defect detection. For instance, a study demonstrated a classification accuracy of approximately 95% 
+                    when distinguishing between keyhole and lack of fusion defects, as well as process pores.  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10533092/?utm_source=chatgpt.com" target="_blank">PMC.gov</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 4 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Impact of Rare Defects</button>
+            <div class="dropdown-content">
+                <p>Research involving over 1,000 tensile tests on additively manufactured stainless steel revealed that rare defects, affecting about 2% of the population, caused a substantial loss in 
+                    ductility. These defects were associated with an interconnected network of porosity, underscoring the need for rigorous quality control to detect even infrequent anomalies. 
+                     <a href="https://www.osti.gov/servlets/purl/1343622?utm_source=chatgpt.com" target="_blank">OSTI.gov</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 5 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Process Variability</button>
+            <div class="dropdown-content">
+                <p>Studies have shown that defect populations in AM materials possess features that can significantly impact fatigue and fracture properties. This variability highlights the necessity for 
+                    robust statistical process control (SPC) methods to monitor and control the manufacturing process effectively. <a href="https://commons.case.edu/facultyworks/347/?utm_source=chatgpt.com" target="_blank">Case.edu</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 6 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Predictive Modeling Improvement</button>
+            <div class="dropdown-content">
+                <p>Advancements in predictive modeling for AM defects have shown a 43% improvement in predicting defects without losing precision. This enhancement aids in preemptively identifying potential 
+                    quality issues, allowing for corrective actions before defects manifest in the final product. 
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/24725854.2023.2207633?utm_source=chatgpt.com" target="_blank">Taylor&Francis.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage6">
+        <p1 class="bottom-bar-text">Stage 6 - Integration</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage6").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-6");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 6 Section (full page) -->
+<div id="stage-6" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-5')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Integration</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>Additive manufacturing should be integrated into existing workflows, such as product design, engineering, and production. Align AM with your supply chain by working with procurement to identify 
+        material suppliers and ensure the efficient delivery of raw materials.<br><br>Collaboration across departments (e.g., R&D, quality control, and logistics) will ensure smooth transitions and help identify 
+        the best opportunities to optimize processes. Determine where AM will bring value, whether it's for rapid prototyping, tooling, or end-use production.</p>
+</div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+        <div class="dropdown">
+            <button class="dropdown-btn">Honeywell's Supply Chain Overhaul</button>
+            <div class="dropdown-content">
+                <img src="Honeywell.jpeg" alt="Image 1" class="dropdown-image" />
+                <p>Honeywell integrated AM into its supply chain to produce critical components like heat exchangers, working closely with design, engineering, and procurement teams to streamline operations.
+                     The integration improved flexibility and reduced lead times. The takeaway is that cross-departmental collaboration is essential for successfully incorporating AM into existing supply 
+                     chains.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Ford's Hybrid Manufacturing Process</button>
+            <div class="dropdown-content">
+                <img src="Ford.png" alt="Image 2" class="dropdown-image" />
+                <p>Ford adopted a hybrid manufacturing process combining traditional and AM methods to produce custom tools and parts, improving flexibility and reducing lead times. This approach allowed 
+                    Ford to leverage AM's benefits while maintaining existing production systems. The takeaway is that combining traditional manufacturing with AM can optimize existing workflows and 
+                    enhance production efficiency.</p>
+            </div>
+        </div>
+        <br>
+        <p><strong>Challenges</strong></p>
+        <!-- Dropdown 3 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Cost of Implementation</button>
+            <div class="dropdown-content">
+                <p>The initial investment in AM equipment, materials, and software can be substantial. Additionally, ongoing expenses for maintenance and training may pose financial challenges, particularly 
+                    for small to medium-sized enterprises.  <a href="https://sybridge.com/top-challenges-additive-manufacturing-how-to-overcome-them/?utm_source=chatgpt.com" target="_blank">Sybridge.com</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 4 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Workforce Skill Gaps</button>
+            <div class="dropdown-content">
+                <p>A shortage of personnel with expertise in AM necessitates either training existing staff or recruiting skilled professionals, both of which require time and resources. 
+                     <a href="https://www.materialise.com/en/inspiration/articles/integrating-additive-manufacturing?.com" target="_blank">Materialise.com</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 5 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Integration with Existing Processes</button>
+            <div class="dropdown-content">
+                <p>Aligning AM with current workflows and supply chains can be complex, often requiring process redesigns and ensuring compatibility between AM and traditional manufacturing methods.  
+                    <a href="https://www.materialise.com/en/inspiration/articles/integrating-additive-manufacturing?.com" target="_blank">Materialise.com</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 6 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Quality Assurance and Standardisation</button>
+            <div class="dropdown-content">
+                <p>Maintaining consistent quality in AM-produced parts is challenging due to process variability. Establishing robust quality control systems and adhering to industry standards are 
+                    essential yet complex tasks. <a href="https://amfg.ai/2019/10/08/10-of-the-biggest-challenges-in-scaling-additive-manufacturing-for-production-expert-roundup/?utm_source=chatgpt.com" target="_blank">AMFG.ai</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage7">
+        <p1 class="bottom-bar-text">Stage 7 - Scaling & Improvements</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage7").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-7");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+    <!-- Stage 7 Section (full page) -->
+<div id="stage-7" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-6')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Scaling & Improvements</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>Start with low-risk pilot projects to familiarize your team with additive manufacturing workflows, identify challenges, and refine processes. Gradually scale production as confidence grows, building 
+        the expertise and infrastructure needed for larger demands, from prototyping to mass production.
+        
+        As AM evolves rapidly, continuous improvement is vital. Stay updated on new technologies, materials, and techniques through industry events and training. Regularly review processes to enhance 
+        quality, cost, and productivity, and use team and customer feedback to maintain a competitive edge.</p>
+        
+        <div class="question-container1">
+            <p style="font-family: 'Arial', sans-serif; font-size: 1rem; color: #ffffff;">When scaling additive manufacturing operations, what is the best initial approach to minimize risks and refine processes?</p>
+            <button class="answer-btn" onclick="showAnswerQ1(this, 'A')">A. Start with small-scale pilot projects to identify challenges and improve workflows.</button>
+            <button class="answer-btn" onclick="showAnswerQ1(this, 'B')">B. Immediately invest in large-scale production equipment to accelerate adoption.</button>
+            <button class="answer-btn" onclick="showAnswerQ1(this, 'C')">C. Outsource all AM operations to eliminate the need for internal expertise.</button>
+            <div class="answer1" id="answer-1"></div>
+        </div>
+    </div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+        <div class="dropdown">
+            <button class="dropdown-btn">Trinckle and Aqtor Orthotics collaboration</button>
+            <div class="dropdown-content">
+                <img src="trinckle aqtor.png" alt="Image 1" class="dropdown-image" />
+                <p>These companies collaborated to develop a digital platform for designing and manufacturing 3D-printed orthoses. Starting with pilot production, the platform automated recurring design 
+                    tasks, reducing labor costs by up to 60%. This demonstrates how businesses can scale additive manufacturing while improving efficiency and leveraging digital workflows.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">EOS GmbH Post-Processing Optimisation</button>
+            <div class="dropdown-content">
+                <img src="EOS.png" alt="Image 2" class="dropdown-image" />
+                <p>EOS GmbH implemented iterative optimization in additive manufacturing and post-processing workflows. By identifying and resolving bottlenecks through simulation models, the company 
+                    improved ROI by 17% and reduced costs per part (CPP) by 15%, showcasing scalable improvements in production efficiency.</p>
+            </div>
+        </div>
+       
+        <div class="question-container2">
+            <p style="font-family: 'Arial', sans-serif; font-size: 1rem; color: #ffffff; line-height: 1.7;">What is the most effective way to ensure continuous improvement in additive manufacturing processes?</p>
+            <button class="answer-btn" onclick="showAnswerQ2(this, 'A')">A. Focus solely on increasing production speed and lowering material costs.</button>
+            <button class="answer-btn" onclick="showAnswerQ2(this, 'B')">B. Regularly attend industry events, webinars, and training sessions to stay updated on advancements.</button>
+            <button class="answer-btn" onclick="showAnswerQ2(this, 'C')">C. Rely on existing workflows without revisiting bottlenecks or gathering team feedback.</button>
+            <div class="answer1" id="answer-2" style="line-height: 1.4" ></div>
+        </div>
+        
+    </div>
+</div>
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage8">
+        <p1 class="bottom-bar-text">Stage 8 - IP & Regulatory Compliance</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage8").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-8");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 8 Section (full page) -->
+<div id="stage-8" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-7')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>IP & Regulatory Compliance</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>As AM can enable the production of custom, often complex parts, intellectual property protection is a critical consideration. Ensure that your designs are protected by patents or copyrights where 
+        appropriate, and establish clear guidelines regarding who owns the rights to 3D printed designs and models.<br><br>Additionally, ensure that all your products comply with relevant regulatory standards, 
+        especially if you're working in regulated sectors like aerospace, automotive, or healthcare. This may include ensuring materials are certified for specific applications or that the final printed 
+        parts meet safety standards.</p>
+    </div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+        <div class="dropdown">
+            <button class="dropdown-btn">GE Aviation's 3D-Printed Fuel Nozzle testing and standards</button>
+            <div class="dropdown-content">
+                <img src="GE.png" alt="Image 1" class="dropdown-image" />
+                <p>GE developed a 3D-printed fuel nozzle for jet engines, complying with aerospace industry standards. The company implemented rigorous testing and documentation to meet FAA regulations, 
+                    highlighting the importance of compliance in regulated sectors like aviation.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Stryker's 3D-Printed Implants</button>
+            <div class="dropdown-content">
+                <img src="stryker.png" alt="Image 2" class="dropdown-image" />
+                <p>Stryker, a medical device manufacturer, created 3D-printed titanium implants. The company adhered to medical device regulations by ensuring material traceability and quality control, 
+                    demonstrating compliance in the healthcare sector.</p>
+            </div>
+        </div>
+        <br>
+        <p><strong>Important Facts</strong></p>
+        <!-- Dropdown 3 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Intellectual Property Protection</button>
+            <div class="dropdown-content">
+                <p>The rise of 3D printing has introduced complexities in IP law, as traditional protections may not fully address the challenges posed by digital designs and easy replication. In the UK, 
+                    design registrations offer exclusive rights to make, sell, and use a product embodying a registered design, providing a robust form of IP protection for 3D-printed products.  
+                    <a href="https://www.tctmagazine.com/additive-manufacturing-3d-printing-industry-insights/technology-insights/what-is-a-design-registration-and-what-they-mean-uk-3d-printer-manufacturers/?utm_source=chatgpt.com" target="_blank">TCT Magazine.com</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 4 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Regulatory Compliance for Medical Devices</button>
+            <div class="dropdown-content">
+                <p> In the medical sector, 3D-printed devices are subject to stringent regulatory frameworks. Manufacturers must adhere to specific standards, conduct necessary conformity assessments, and 
+                    maintain comprehensive technical documentation to ensure safety and efficacy. The Medicines and Healthcare products Regulatory Agency (MHRA) provides guidance on the requirements for 
+                    3D-printed medical devices in the UK. <a href="https://www.gov.uk/guidance/3d-printing-additive-manufacturing-of-medical-devices-or-component-parts-during-the-coronavirus-covid-19-pandemic?utm_source=chatgpt.com" target="_blank">GOV.uk</a></p>
+            </div>
+        </div>
+        <!-- Dropdown 5 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Safety Standards for Equipment</button>
+            <div class="dropdown-content">
+                <p>AM equipment must comply with established safety standards to protect operators and users. Guidelines are available to assist manufacturers in selecting appropriate safety standards and 
+                    ensuring that equipment meets necessary safety requirements. For instance, the Low Voltage Directive (2014/35/EU) and the Machinery Directive (2006/42/EC) are relevant to AM equipment 
+                    safety in the UK.  <a href="https://www.sourcingspeak.com/legal-issues-additive-manufacturing-technology/?utm_source=chatgpt.com" target="_blank">Sourcing Speak.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToStage9">
+        <p1 class="bottom-bar-text">Stage 9 - Cost Analysis & ROI</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToStage9").addEventListener("click", function() {
+        const nextSection = document.getElementById("stage-9");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+<!-- Stage 9 Section (full page) -->
+<div id="stage-9" class="section">
+    <div class="top-arrow" onclick="scrollToSection('stage-8')">&#x25C0;</div> <!-- Left arrow -->
+    <h2>Cost Analysis & ROI</h2>
+    <div class="section-content">
+    <div class="section-content-left">
+        <p style="font-family: 'Arial', sans-serif; font-size: 1.5rem; color: #ffffff; margin-bottom: -10px"><strong>Guide</strong></p>
+    <p>Carefully evaluate the costs associated with implementing and maintaining additive manufacturing technologies. This includes the upfront costs of purchasing equipment, ongoing material and labor costs,
+         as well as the costs of software licenses and training. Analyze the ROI by comparing the costs of AM against traditional manufacturing processes in terms of production speed, flexibility, material 
+         waste, and quality. Monitor performance over time to ensure that your AM investment continues to provide value, and adjust your strategy as necessary based on operational results and changing business
+          needs.</p>
+    </div>
+    <div class="section-content-right">
+        <p><strong>Case Studies</strong></p>
+        <div class="dropdown">
+            <button class="dropdown-btn">Ford Motor Company AM implementation</button>
+            <div class="dropdown-content">
+                <img src="Ford.png" alt="Image 1" class="dropdown-image" />
+                <p>Ford implemented additive manufacturing for prototyping and small-batch production, analyzing costs related to equipment, materials, and labor. By focusing on 
+                    cost-effective applications, such as jigs and fixtures, Ford achieved significant cost savings and reduced lead times.</p>
+            </div>
+        </div>
+
+        <!-- Dropdown 2 -->
+        <div class="dropdown">
+            <button class="dropdown-btn">Siemens AM implementation for Gas Turbines</button>
+            <div class="dropdown-content">
+                <img src="siemens.png" alt="Image 2" class="dropdown-image" />
+                <p>Siemens integrated additive manufacturing for turbine components, conducting a detailed ROI analysis. The transition to 3D-printed parts improved performance and 
+                    reduced production costs, demonstrating the financial viability of adopting additive manufacturing for critical components.</p>
+            </div>
+        </div>
+        <br>
+        <p><strong>Important Information</strong></p>
+        <div class="icon-container">
+            <!-- Image Icon 1 -->
+            <div class="icon" id="icon1" onclick="expandContent('content1')">
+                <img src="Cost.png" alt="Icon 1">
+            </div>
+        
+            <!-- Image Icon 2 -->
+            <div class="icon" id="icon2" onclick="expandContent('content2')">
+                <img src="batch.png" alt="Icon 2">
+            </div>
+        
+            <!-- Image Icon 3 -->
+            <div class="icon" id="icon3" onclick="expandContent('content3')">
+                <img src="value-added.png" alt="Icon 3">
+            </div>
+        
+            <!-- Image Icon 4 -->
+            <div class="icon" id="icon4" onclick="expandContent('content4')">
+                <img src="estimation.png" alt="Icon 4">
+            </div>
+        </div>
+        
+        <!-- Content that will appear when an icon is clicked -->
+         <!-- Content box to show content -->
+        <div id="content-box" class="content-box">
+            <span class="close-btn" onclick="closeContentBox()">X</span>
+        <div id="content1" class="content">
+            <p><strong>Global Market Value:</strong></p>
+            <p>As of 2020, the additive manufacturing industry was valued at $13.4 billion, with an annual growth rate of 22%.
+            <a href="https://amfg.ai/2023/08/10/the-real-roi-of-additive-manufacturing-scaling-to-macro-for-strategic-level-benefit/" target="_blank">AMFG.com</a></p>
+        </div>
+        
+        <div id="content2" class="content">
+            <p><strong>Cost-Effectiveness for Small Batches:</strong></p>
+            <p>AM is particularly cost-effective for manufacturing small batches with continued centralized production. However, with increased automation, distributed production may become more cost-effective.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5524380/" target="_blank">PMC.gov</a></p>
+        </div>
+        
+        <div id="content3" class="content">
+            <p><strong>Value Added in Manufacturing:</strong></p>
+            <p>Globally, additive manufacturing contributed an estimated $667 million in value added to manufacturing, representing 0.01% of total global manufacturing value added. In the U.S., this value added was estimated at $241 million.
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5524380/" target="_blank">PMC.gov</a></p>
+        </div>
+        
+        <div id="content4" class="content">
+            <p><strong>Cost Estimation Techniques:</strong></p>
+            <p>Various cost estimation techniques, such as regression analysis, are employed to forecast the costs of new designs in additive manufacturing. These methods help in identifying significant variables that contribute to overall costs.
+            <a href="https://dspace.lib.cranfield.ac.uk/server/api/core/bitstreams/f7a422b3-12da-4d81-8577-d485d7148870/content" target="_blank">CERES.com</a></p>
+        </div>
+    </div>
+</div>
+    
+</div>
+    <!-- Bottom Bar to Scroll to Next Section -->
+    <div class="bottom-bar3" id="scrollToFinish">
+        <p1 class="bottom-bar-text">FINISH</p1>
+        <div class="bottom-bar-arrow">&#x25BC;</div> <!-- Downward arrow -->
+    </div>
+</div>
+
+<script>
+    // Scroll functionality 
+    document.getElementById("scrollToFinish").addEventListener("click", function() {
+        const nextSection = document.getElementById("Finish");
+        
+        // Scroll smoothly to the next section
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    });
+    function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+    </script>
+
+    <!-- Finish Section (full page) -->
+    <div id="Finish" class="section">
+        <div class="top-arrow" onclick="scrollToSection('stage-9')">&#x25C0;</div> <!-- Left arrow -->
+        <img src="AM-UK_Logo_CMYK[69].png" alt="image-header" class="adopt-image">
+        <h2>Complete</h2>
+        <p>You have completed the necessary steps to Adopting AM within your business</p>
+        
+
+        </div>
+        <script>
+            // Scroll functionality 
+        
+            function scrollToSection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        </script>
+
+
+    <script src="AMUK - Adopting AM 3.js"></script>
+</body>
+</html>
+
